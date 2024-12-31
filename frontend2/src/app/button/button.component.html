@@ -1,0 +1,9 @@
+<button (click)="triggerFileInput()" mat-flat-button>Upload Image</button>
+<input 
+  type="file" 
+  accept="image/*" 
+  #fileInput 
+  (change)="onFileSelected($event)" 
+  style="display: none;" 
+/>
+<p *ngIf="fileName">Selected file: {{ fileName }}</p>
